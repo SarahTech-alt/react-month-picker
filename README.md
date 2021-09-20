@@ -35,6 +35,19 @@ This app will display a list of months on the page. When a month is clicked, it 
 
 ---
 
+### Tasks
+- [ ] Test rendering data to the DOM with stringify on the app.js
+- [ ] Check dependencies and source if necessary 'use state' and 'use effect' from react
+- [ ] Create a variable monthArray and set state to an empty array
+- [ ] Create a GET route on app.js and push the results to monthArray
+- [ ] Create a component 'MonthList' which takes in the monthArray via props, import it on app.js
+- [ ] Create a component 'MonthItem' which takes in the mapped array from MonthList via props
+- [ ] Create a variable isSelected and set state to false
+- [ ] Using conditional rendering when a month is clicked set its state to true and display an alert
+        to the user with the month selected
+- [ ] Set attribute back to false after alert? 
+
+
 ## STRETCH FEATURE
 
 - Move the header into it's own component, `Header`, as a child of App. `Header` should display the month that was just clicked. Keep the data in App.js. You will have to get the data from the `MonthItem` "up" to `App` and then into `Header`.
