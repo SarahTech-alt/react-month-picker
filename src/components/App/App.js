@@ -1,42 +1,45 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 import './App.css';
-import '../MonthList/MonthList.js'
-import '../MonthItem/MonthItem.js'
+import MonthList from '../MonthList/MonthList';
+import { useEffect, useState } from 'react';
 
 
 function App() {
 
-  useEffect(() => {
-    getMonths();
-  }, []);
+useEffect(() => {
+  getMonth();
+}, []);
 
-  const [calendarData, setCalendarData] = useState([]);
 
-  const getMonths = () => {
-    axios({
-      method: 'Get',
-      url: '/calendar'
-    }).then(response => {
-      setCalendarData(response);
-    }).catch(error => {
-      console.log('There was an error getting the data', error);
-    })
-  }
+const [monthList, setMonthList] = useState([])
 
-  return (
-    <div className="App">
+const getMonth = () => {
+  axios({
+    method: 'GET',
+    url: '/calendar'
+  }).then(response => {
+    console.log('successfully got calendar items', response);
+    console.log(response.data);
+    setMonthList(response.data)
+  }).catch(error => {
+    console.log('there was an error getting calendar', error);
+  })
+}
+
+
+return (
+  <div className="App">
       <header className="App-header">
         <h1 className="App-title">Select a Month</h1>
         <h3>SELECTED MONTH GOES HERE</h3>
         <br />
-      </header>
-      <br />
-      <p>List of months goes here</p>
-      {JSON.stringify(calendarData)}
-    </div>
-  );
+    </header>
+    {/* {JSON.stringify(monthList)}> */}
+    <MonthList monthList={monthList}
+      getMonth={getMonth} />
+  </div>
+);
 }
-
 
 export default App;

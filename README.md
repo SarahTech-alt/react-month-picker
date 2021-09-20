@@ -40,12 +40,9 @@ This app will display a list of months on the page. When a month is clicked, it 
 - [x] Create a GET route on app.js and push the results to monthArray
 - [x] Test rendering data to the DOM with stringify on the app.js
 - [x] Check dependencies and source if necessary 'use state' and 'use effect' from react
-- [ ] Create a component 'MonthList' which takes in the monthArray via props, import it on app.js
-- [ ] Create a component 'MonthItem' which takes in the mapped array from MonthList via props
-- [ ] Create a variable isSelected and set state to false
-- [ ] Using conditional rendering when a month is clicked set its state to true and display an alert
-        to the user with the month selected
-- [ ] Set attribute back to false after alert? 
+- [x] Create a component 'MonthList' which takes in the monthArray via props, import it on app.js
+- [x] Create a component 'MonthItem' which takes in the mapped array from MonthList via props
+- [x] Create an alert displaying the month when the month name is clicked 
 
 
 ## STRETCH FEATURE
