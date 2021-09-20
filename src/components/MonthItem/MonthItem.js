@@ -1,14 +1,15 @@
-import { useState } from 'react';
 
-function monthItem({month}) {
 
-    const [alertMonth, setAlertMonth] = useState(false)
+function monthItem({ month }) {
 
-    return(
+// Making a list item in an ordered list for each
+// item in monthList array
+
+    return (
         <>
-        <ul>
-            <li onClick = {() => alert(month.name)}>{month.name}</li>
-        </ul>
+            <ul>
+                <li onClick={() => alert(month.name)}>{month.name}</li>
+            </ul>
         </>
     );
 }

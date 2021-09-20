@@ -32,12 +32,13 @@ return (
   <div className="App">
       <header className="App-header">
         <h1 className="App-title">Select a Month</h1>
-        <h3>SELECTED MONTH GOES HERE</h3>
+        <h3>MAKE A SELECTION</h3>
         <br />
     </header>
     {/* {JSON.stringify(monthList)}> */}
+    {/* Passing month list array to MonthList component */}
     <MonthList monthList={monthList}
-      getMonth={getMonth} />
+       />
   </div>
 );
 }
