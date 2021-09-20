@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import '../MonthList/MonthList.js'
+import '../MonthItem/MonthItem.js'
 
 
 function App() {

@@ -39,7 +39,7 @@ This app will display a list of months on the page. When a month is clicked, it 
 - [x] Create a variable monthArray and set state to an empty array
 - [x] Create a GET route on app.js and push the results to monthArray
 - [x] Test rendering data to the DOM with stringify on the app.js
-- [ ] Check dependencies and source if necessary 'use state' and 'use effect' from react
+- [x] Check dependencies and source if necessary 'use state' and 'use effect' from react
 - [ ] Create a component 'MonthList' which takes in the monthArray via props, import it on app.js
 - [ ] Create a component 'MonthItem' which takes in the mapped array from MonthList via props
 - [ ] Create a variable isSelected and set state to false
