@@ -7,9 +7,7 @@ function monthItem({ month }) {
 
     return (
         <>
-            <ul>
                 <li onClick={() => alert(month.name)}>{month.name}</li>
-            </ul>
         </>
     );
 }
